@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://127.0.0.1:3306/store?serverTimezone=UTC</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.username">sergey</property>
+        <property name="connection.password">dfvgbh</property>
+        <!-- DB schema will be updated if needed -->
+        <property name="hbm2ddl.auto">update</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <mapping class="com.gr00shik.entity.store.Seller"/>
+        <mapping class="com.gr00shik.entity.store.Shop"/>
+        <mapping class="com.gr00shik.entity.store.Product"/>
+        <mapping class="com.gr00shik.entity.store.Deal"/>
+    </session-factory>
+</hibernate-configuration>
